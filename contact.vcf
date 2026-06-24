@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Lastname;Firstname;;;
+FN:Firstname Lastname
+ORG:Company / Brand
+TITLE:Role
+TEL;TYPE=CELL,VOICE:+46700000000
+EMAIL;TYPE=INTERNET:name@example.com
+URL:https://example.com
+ADR;TYPE=WORK:;;Street 1;City;;12345;Country
+NOTE:Saved via NFC card
+END:VCARD

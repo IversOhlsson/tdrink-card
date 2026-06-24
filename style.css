@@ -1,0 +1,124 @@
+:root {
+  --bg: #0f1115;
+  --card: #1a1d24;
+  --fg: #f4f5f7;
+  --muted: #9aa0ac;
+  --accent: #4f8cff;
+  --accent-fg: #ffffff;
+  --line: #2a2e38;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: max(20px, env(safe-area-inset-top)) 20px max(20px, env(safe-area-inset-bottom));
+  -webkit-font-smoothing: antialiased;
+}
+
+.card {
+  width: 100%;
+  max-width: 380px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 32px 24px 28px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), #7b5cff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+
+.initials {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--accent-fg);
+  letter-spacing: 1px;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+
+.role {
+  font-size: 15px;
+  color: var(--muted);
+  margin: 0 0 22px;
+}
+
+.details {
+  list-style: none;
+  margin: 0 0 26px;
+  padding: 0;
+  text-align: left;
+  border-top: 1px solid var(--line);
+}
+
+.details li {
+  border-bottom: 1px solid var(--line);
+}
+
+.details a {
+  display: block;
+  padding: 13px 4px;
+  color: var(--fg);
+  text-decoration: none;
+  font-size: 15px;
+  word-break: break-word;
+}
+
+.details a:active { color: var(--accent); }
+
+.save-btn {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  background: var(--accent);
+  color: var(--accent-fg);
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 14px;
+  transition: transform 0.05s ease, opacity 0.15s ease;
+}
+
+.save-btn:active { transform: scale(0.98); opacity: 0.9; }
+
+.hint {
+  margin: 16px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted);
+  min-height: 1.5em;
+}
